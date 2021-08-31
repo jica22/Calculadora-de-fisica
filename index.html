@@ -5,49 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de física</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrapper flex">
-        <div class="form">
-            <form id="myForm" action="" autocomplete="off" style="display: flex; flex-direction:column; max-width:10rem;">
-                <label for="v">Velocidade Final</label>
-                <input step="0.01" type="number" id="v">
-                <label for="vo">Velocidade Inicial</label>
-                <input step="0.01" type="number" id="vo">
-                <label for="s">Espaço final</label>
-                <input step="0.01" type="number" id="s">
-                <label for="so">Espaço inicial</label>
-                <input step="0.01" type="number" id="so">
-                <label for="deltas">Variação de espaço</label>
-                <input step="0.01" type="number" id="deltas">
-                <label for="a">Aceleração</label>
-                <input step="0.01" type="number" id="a">
-                <label for="t">Tempo</label>
-                <input step="0.01" type="number" id="t">
-                <button id="vaidarcerto" style="margin-top:1rem;">Continuar</button>
+    <div class="wrapper row col-12 mt-5">
+        <div class="form col-6 col-md-4">
+            <form id="myForm" autocomplete="off" class="mx-auto px-3">
+                <div class="mb-2">
+                    <label for="v" class="form-label">Velocidade Final</label>
+                    <input step="0.01" class="form-control" type="number" id="v">
+                </div>
+                <div class="mb-2">
+                    <label for="vo" class="form-label">Velocidade Inicial</label>
+                    <input step="0.01" class="form-control" type="number" id="vo">
+                </div>
+                <div class="mb-2">
+                    <label for="s" class="form-label">Espaço final</label>
+                    <input step="0.01" class="form-control" type="number" id="s">
+                </div>
+                <div class="mb-2">
+                    <label for="so" class="form-label">Espaço inicial</label>
+                    <input step="0.01" class="form-control" type="number" id="so">
+                </div>
+                <div class="mb-2">
+                    <label for="deltas" class="form-label">Variação de espaço</label>
+                    <input step="0.01" class="form-control" type="number" id="deltas">
+                </div>
+                <div class="mb-2">
+                    <label for="a" class="form-label">Aceleração</label>
+                    <input step="0.01" class="form-control" type="number" id="a">
+                </div>
+                <div class="mb-2">
+                    <label for="t" class="form-label">Tempo</label>
+                    <input step="0.01" class="form-control" type="number" id="t">
+                </div>
+                <button id="vaidarcerto" class="mt-2 btn btn-primary w-100">Continuar</button>
             </form>
             <script src="uu.js"></script>
         </div>
-        <div class="result flex flex-col">
-            <h4>Velocidade Final</h4>
-            <p id="textV">Desconhecido</p>
-            <h4>Velocidade Inicial</h4>
-            <p id="textVo">Desconhecido</p>
-            <h4>Espaço Final</h4>
-            <p id="textS">Desconhecido</p>
-            <h4>Espaço Inicial</h4>
-            <p id="textSo">Desconhecido</p>
-            <h4>Variação de Espaço</h4>
-            <p id="textDeltas">Desconhecido</p>
-            <h4>Aceleração</h4>
-            <p id="textA">Desconhecido</p>
-            <h4>Tempo</h4>
-            <p id="textT">Desconhecido</p>
+        <div class="col-6 col-md-4 d-flex">
+            <div class="vr me-5"></div>
+            <div class="">
+                <h4>Velocidade Final</h4>
+                <p id="textV">Desconhecido</p>
+                <h4>Velocidade Inicial</h4>
+                <p id="textVo">Desconhecido</p>
+                <h4>Espaço Final</h4>
+                <p id="textS">Desconhecido</p>
+                <h4>Espaço Inicial</h4>
+                <p id="textSo">Desconhecido</p>
+                <h4>Variação de Espaço</h4>
+                <p id="textDeltas">Desconhecido</p>
+                <h4>Aceleração</h4>
+                <p id="textA">Desconhecido</p>
+                <h4>Tempo</h4>
+                <p id="textT">Desconhecido</p>
+            </div>
         </div>
-        <div class="result flex flex-col">
-            <h4>Formulas usadas:</h4>
-            <p id="textFormula">Desconhecido</p>
+        <div class="col-12 col-md-4 d-flex">
+            <div class="vr me-5"></div>
+            <div>
+                <h4>Formulas usadas:</h4>
+                <p id="textFormula">Desconhecido</p>
+            </div>
         </div>
     </div>
 </body>

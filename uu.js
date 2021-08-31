@@ -205,11 +205,11 @@ setInnerText(textT, t);
             setInnerHTML(textFormula,
                 `S = So + VoT + AT²/2<br />
                 ${s} = ${so} + ${vo}*T + ${a}*T²/2<br />
-                ${s} = ${so} + ${vo}*T + ${a/2}*T²<br />
-                Δ = ${vo}² - 4*${a}*${so}<br />
-                Δ = ${vo**2} - 4*${a}*${so} <br />
-                Δ = ${vo**2} ${Math.sign(-4*a*so) ? "+" : ""} ${4*a*so} <br />
-                Δ = ${(vo**2) - (4*a*so)} <br />
+                0 = ${so-s} + ${vo}*T + ${a/2}*T²<br />
+                Δ = ${vo}² - 4*${a}*${so-s}<br />
+                Δ = ${vo**2} - 4*${a}*${so-s} <br />
+                Δ = ${vo**2} ${Math.sign(-4*a*so-s) ? "+" : ""} ${-4*a*so-s} <br />
+                Δ = ${(vo**2) - (4*a*so-s)} <br />
                 Essa equação não tem raízes.
                  <br />
                 `);
@@ -229,16 +229,20 @@ setInnerText(textT, t);
             result.push(result2);
         }
         console.log(result);
-        setInnerText(textT, result);
+        if (result.length == 0) {
+        setInnerText(textT, "Não foi possível calcular");
+        } else {
+            setInnerText(textT, result);
+        }
         if (delta > 0) {
             setInnerHTML(textFormula,
                 `S = So + VoT + AT²/2<br />
                 ${s} = ${so} + ${vo}*T + ${a}*T²/2<br />
-                ${s} = ${so} + ${vo}*T + ${a/2}*T²<br />
-                Δ = ${vo}² - 4*${a}*${so}<br />
-                Δ = ${vo**2} - 4*${a}*${so} <br />
-                Δ = ${vo**2} ${Math.sign(-4*a*so) ? "+" : ""} ${-4*a*so} <br />
-                Δ = ${(vo**2) - (4*a*so)} <br />
+                0 = ${so-s} + ${vo}*T + ${a/2}*T²<br />
+                Δ = ${vo}² - 4*${a}*${so-s}<br />
+                Δ = ${vo**2} - 4*${a}*${so-s} <br />
+                Δ = ${vo**2} ${Math.sign(-4*a*so-s) ? "+" : "-"} ${-4*a*so-s} <br />
+                Δ = ${(vo**2) - (4*a*so-s)} <br />
                 tI = ${-vo} +- √${delta}/2*${a} <br />
                 tI = ${-vo} + √${Math.sqrt(delta)}/${2*a} <br />
                 tI = ${-vo + Math.sqrt(delta)}/${2*a} <br />
@@ -252,11 +256,11 @@ setInnerText(textT, t);
             setInnerHTML(textFormula,
                 `S = So + VoT + AT²/2<br />
                 ${s} = ${so} + ${vo}*T + ${a}*T²/2<br />
-                ${s} = ${so} + ${vo}*T + ${a/2}*T²<br />
-                Δ = ${vo}² - 4*${a}*${so}<br />
-                Δ = ${vo**2} - 4*${a}*${so} <br />
-                Δ = ${vo**2} ${Math.sign(-4*a*so) ? "+" : ""} ${-4*a*so} <br />
-                Δ = ${(vo**2) - (4*a*so)} <br />
+                0 = ${so-s} + ${vo}*T + ${a/2}*T²<br />
+                Δ = ${vo}² - 4*${a}*${so-s}<br />
+                Δ = ${vo**2} - 4*${a}*${so-s} <br />
+                Δ = ${vo**2} ${Math.sign(-4*a*so-s) ? "+" : "-"} ${-4*a*so-s} <br />
+                Δ = ${(vo**2) - (4*a*so-s)} <br />
                 tI = ${-vo} +- √${delta}/2*${a} <br />
                 tI = ${-vo} + √${Math.sqrt(delta)}/${2*a} <br />
                 tI = ${-vo + Math.sqrt(delta)}/${2*a} <br />

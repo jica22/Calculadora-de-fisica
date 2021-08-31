@@ -1,23 +1,9 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(17, 17, 17);
-}
-.wrapper {
-    width: 100%;
-}
 .result {
     border: 0px;
     border-left: 1px;
     border-color: gray;
     border-style: solid;
-    margin-left: 2rem;
     padding-left: 2rem;
-}
-.flex {
-    display: flex;
-}
-.flex-col {
-    flex-direction: column;
 }
 
 h4 {

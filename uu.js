@@ -281,7 +281,7 @@ setInnerText(textT, t);
         //Achar Velocidade inicial;
     if (v && !vo && !so && deltas && a && !t) {
         zerado();
-        var result = -Math.sqrt(-(v**2) + 2*a*deltas);
+        var result = -Math.sqrt((v**2) + 2*a*deltas);
         setInnerText(textVo, result);
         setInnerHTML(textFormula,
             `V² = Vo² + 2*A*ΔS<br />
@@ -291,7 +291,7 @@ setInnerText(textT, t);
             -Vo² = ${v**2 + 2*a*deltas} <br />
             -Vo = √${v**2 + 2*a*deltas} <br />
             -Vo = ${Math.sqrt(v**2 + 2*a*deltas)} <br />
-            Vo = ${result}
+            Vo = ${-Math.sqrt(v**2 + 2*a*deltas)} <br />
             `);
     }
         //Achar Aceleração;

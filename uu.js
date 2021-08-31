@@ -187,7 +187,7 @@ setInnerText(textT, t);
         zerado();
         so -= s;
         console.log("Você ta sendo chato opera");
-        var delta = Math.sqrt((vo**2) - (4*a*so));
+        var delta = Math.sqrt((vo**2) - (4*a/2*so));
         console.log("Delta: " + delta)
         if (!delta) {
             setInnerHTML(textFormula,
@@ -195,10 +195,10 @@ setInnerText(textT, t);
                 ${s} = ${so + s} + ${vo}*T + ${a}*T²/2<br />
                 0 = ${so + s} - ${s} + ${vo}*T + ${a/2}*T²<br />
                 0 = ${so} + ${vo}*T + ${a/2}*T²<br />
-                Δ = ${vo}² - 4*${a}*${so-s}<br />
-                Δ = ${vo**2} - 4*${a}*${so-s} <br />
-                Δ = ${vo**2} ${Math.sign(-4*a*so) ? "+" : ""} ${-4*a*so} <br />
-                Δ = ${(vo**2) - (4*a*so-s)} <br />
+                Δ = ${vo}² - 4*${a/2}*${so-s}<br />
+                Δ = ${vo**2} - 4*${a/2}*${so-s} <br />
+                Δ = ${vo**2} ${Math.sign(-4*a/2*so) ? "+" : ""} ${-4*a/2*so} <br />
+                Δ = ${(vo**2) - (4*a/2*so-s)} <br />
                 Essa equação não tem raízes.
                  <br />
                 `);
@@ -206,9 +206,9 @@ setInnerText(textT, t);
         else {
             console.log(delta);
         }
-        var result1 = (-vo + delta) / (2*a);
+        var result1 = (-vo + delta) / (2*a/2);
         console.log("Result1 " + result1);
-        var result2 = (-vo - delta) / (2*a);
+        var result2 = (-vo - delta) / (2*a/2);
         var result = [];
         if (result1 >= 0) {
             console.log("entrou");
@@ -231,17 +231,17 @@ setInnerText(textT, t);
                 ${s} = ${so + s} + ${vo}*T + ${a}*T²/2<br />
                 0 = ${so + s} - ${s} + ${vo}*T + ${a/2}*T²<br />
                 0 = ${so} + ${vo}*T + ${a/2}*T²<br />
-                Δ = ${vo}² - 4*${a}*${so}<br />
-                Δ = ${vo**2} - 4*${a}*${so} <br />
-                Δ = ${vo**2} ${Math.sign(-4*a*so) ? "+" : "-"} ${-4*a*so} <br />
-                Δ = ${(vo**2) - (4*a*so)} <br />
-                tI = ${-vo} +- √${delta**2}/2*${a} <br />
-                tI = ${-vo} + ${delta}/${2*a} <br />
-                tI = ${-vo + delta}/${2*a} <br />
+                Δ = ${vo}² - 4*${a/2}*${so}<br />
+                Δ = ${vo**2} - 4*${a/2}*${so} <br />
+                Δ = ${vo**2} ${Math.sign(-4*a/2*so) ? "+" : "-"} ${-4*a/2*so} <br />
+                Δ = ${(vo**2) - (4*a/2*so)} <br />
+                tI = ${-vo} +- √${delta**2}/2*${a/2} <br />
+                tI = ${-vo} + ${delta}/${2*a/2} <br />
+                tI = ${-vo + delta}/${2*a/2} <br />
                 tI = ${result1} <br />
-                tII = ${-vo} +- √${delta**2}/2*${a} <br />
-                tII = ${-vo} - ${delta}/${2*a} <br />
-                tII = ${-vo - delta}/${2*a} <br />
+                tII = ${-vo} +- √${delta**2}/2*${a/2} <br />
+                tII = ${-vo} - ${delta}/${2*a/2} <br />
+                tII = ${-vo - delta}/${2*a/2} <br />
                 tII = ${result2}`);
             }
         if (delta == 0) {
@@ -250,13 +250,13 @@ setInnerText(textT, t);
                 ${s} = ${so + s} + ${vo}*T + ${a}*T²/2<br />
                 0 = ${so + s} - ${s} + ${vo}*T + ${a/2}*T²<br />
                 0 = ${so} + ${vo}*T + ${a/2}*T²<br />
-                Δ = ${vo}² - 4*${a}*${so}<br />
-                Δ = ${vo**2} - 4*${a}*${so} <br />
-                Δ = ${vo**2} ${Math.sign(-4*a*so) ? "+" : "-"} ${-4*a*so} <br />
-                Δ = ${(vo**2) - (4*a*so-s)} <br />
-                tI = ${-vo} +- √${delta**2}/2*${a} <br />
-                tI = ${-vo} + ${delta}/${2*a} <br />
-                tI = ${-vo + delta}/${2*a} <br />
+                Δ = ${vo}² - 4*${a/2}*${so}<br />
+                Δ = ${vo**2} - 4*${a/2}*${so} <br />
+                Δ = ${vo**2} ${Math.sign(-4*a/2*so) ? "+" : "-"} ${-4*a/2*so} <br />
+                Δ = ${(vo**2) - (4*a/2*so-s)} <br />
+                tI = ${-vo} +- √${delta**2}/2*${a/2} <br />
+                tI = ${-vo} + ${delta}/${2*a/2} <br />
+                tI = ${-vo + delta}/${2*a/2} <br />
                 tI = ${result} <br />`);
             }
     }

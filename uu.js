@@ -333,6 +333,7 @@ setInnerText(textT, t);
             ${-a}T = ${vo + -v} <br />
             T = ${vo + -v} / ${-a} <br />
             T = ${(vo - v) / -a}`)
+            setInnerText(textT, (vo - v) / -a);
     }
 });
 

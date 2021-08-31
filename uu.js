@@ -86,19 +86,6 @@ setInnerText(textT, t);
         setInnerText(textV, result);
         setInnerHTML(textFormula, "V = Vo + AT <br /> V = " + vo + " + "+ a + "*" + t + "<br /> V = " + result);
     }
-    //Achar tempo.
-    if (v && vo && !s && !so && !deltas && a && !t) {
-        zerado();
-        var result = (vo + -v)/-a;
-        console.log(result);
-        setInnerText(textT, result);
-        setInnerHTML(textFormula,
-            `V = Vo + AT <br />
-            ${v} = ${vo} + ${a}T <br />
-            ${-a}T = ${vo + -v} <br />
-            T = ${vo + -v} / ${-a} <br />
-            T = ${result}`);
-    }
     //Achar aceleração.
     if (v && vo && !s && !so && !deltas && !a && t) {
         zerado();
@@ -206,7 +193,7 @@ setInnerText(textT, t);
             setInnerHTML(textFormula,
                 `S = So + VoT + AT²/2<br />
                 ${s} = ${so + s} + ${vo}*T + ${a}*T²/2<br />
-                0 = ${so} - ${s} + ${vo}*T + ${a/2}*T²<br />
+                0 = ${so + s} - ${s} + ${vo}*T + ${a/2}*T²<br />
                 0 = ${so} + ${vo}*T + ${a/2}*T²<br />
                 Δ = ${vo}² - 4*${a}*${so-s}<br />
                 Δ = ${vo**2} - 4*${a}*${so-s} <br />
@@ -242,7 +229,7 @@ setInnerText(textT, t);
             setInnerHTML(textFormula,
                 `S = So + VoT + AT²/2<br />
                 ${s} = ${so + s} + ${vo}*T + ${a}*T²/2<br />
-                0 = ${so} - ${s} + ${vo}*T + ${a/2}*T²<br />
+                0 = ${so + s} - ${s} + ${vo}*T + ${a/2}*T²<br />
                 0 = ${so} + ${vo}*T + ${a/2}*T²<br />
                 Δ = ${vo}² - 4*${a}*${so}<br />
                 Δ = ${vo**2} - 4*${a}*${so} <br />
@@ -261,7 +248,7 @@ setInnerText(textT, t);
             setInnerHTML(textFormula,
                 `S = So + VoT + AT²/2<br />
                 ${s} = ${so + s} + ${vo}*T + ${a}*T²/2<br />
-                0 = ${so} - ${s} + ${vo}*T + ${a/2}*T²<br />
+                0 = ${so + s} - ${s} + ${vo}*T + ${a/2}*T²<br />
                 0 = ${so} + ${vo}*T + ${a/2}*T²<br />
                 Δ = ${vo}² - 4*${a}*${so}<br />
                 Δ = ${vo**2} - 4*${a}*${so} <br />

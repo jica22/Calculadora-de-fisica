@@ -196,7 +196,7 @@ setInnerText(textT, t);
             `);
     }
         //Achar Tempo
-    if (!v && vo && so && !deltas && a && !t) {
+    if (!v && s && vo && so && !deltas && a && !t) {
         zerado();
         so -= s;
         console.log("Você ta sendo chato opera");
@@ -234,7 +234,7 @@ setInnerText(textT, t);
         }
         console.log(result);
         if (result.length == 0 || result === undefined) {
-        setInnerText(textT, "Não foi possível calcular");
+        setInnerText(textT, "Não existe tempo negativo.");
         } else {
             setInnerText(textT, result);
         }

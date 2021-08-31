@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(17, 17, 17);
+        }
+        .wrapper {
+            width: 100%;
+        }
+        .result {
+            border: 0px;
+            border-left: 1px;
+            border-color: gray;
+            border-style: solid;
+            margin-left: 2rem;
+            padding-left: 2rem;
+        }
+        .flex {
+            display: flex;
+        }
+        .flex-col {
+            flex-direction: column;
+        }
+
+        h4 {
+            margin-top: 0.6rem;
+            margin-bottom: 0;
+            font-size: 1.25rem;
+        }
+
+        p {
+            margin-top: 0;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper flex">
+        <div class="form">
+            <form id="myForm" action="" autocomplete="off" style="display: flex; flex-direction:column; max-width:10rem;">
+                <label for="v">Velocidade Final</label>
+                <input step="0.01" type="number" id="v">
+                <label for="vo">Velocidade Inicial</label>
+                <input step="0.01" type="number" id="vo">
+                <label for="s">Espaço final</label>
+                <input step="0.01" type="number" id="s">
+                <label for="so">Espaço inicial</label>
+                <input step="0.01" type="number" id="so">
+                <label for="deltas">Variação de espaço</label>
+                <input step="0.01" type="number" id="deltas">
+                <label for="a">Aceleração</label>
+                <input step="0.01" type="number" id="a">
+                <label for="t">Tempo</label>
+                <input step="0.01" type="number" id="t">
+                <button id="vaidarcerto" style="margin-top:1rem;">Continuar</button>
+            </form>
+            <script src="uu.js"></script>
+        </div>
+        <div class="result flex flex-col">
+            <h4>Velocidade Final</h4>
+            <p id="textV">Desconhecido</p>
+            <h4>Velocidade Inicial</h4>
+            <p id="textVo">Desconhecido</p>
+            <h4>Espaço Final</h4>
+            <p id="textS">Desconhecido</p>
+            <h4>Espaço Inicial</h4>
+            <p id="textSo">Desconhecido</p>
+            <h4>Variação de Espaço</h4>
+            <p id="textDeltas">Desconhecido</p>
+            <h4>Aceleração</h4>
+            <p id="textA">Desconhecido</p>
+            <h4>Tempo</h4>
+            <p id="textT">Desconhecido</p>
+        </div>
+        <div class="result flex flex-col">
+            <h4>Formulas usadas:</h4>
+            <p id="textFormula">Desconhecido</p>
+        </div>
+    </div>
+</body>
+</html>

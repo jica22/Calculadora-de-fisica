@@ -200,15 +200,17 @@ setInnerText(textT, t);
         zerado();
         so -= s;
         console.log("Você ta sendo chato opera");
-        var delta = Math.sqrt(vo**2 - 4*a*so);
+        var delta = Math.sqrt((vo**2) - (4*a*so));
+        console.log("Delta: " + delta)
         if (!delta) {
             setInnerHTML(textFormula,
                 `S = So + VoT + AT²/2<br />
-                ${s} = ${so} + ${vo}*T + ${a}*T²/2<br />
-                0 = ${so-s} + ${vo}*T + ${a/2}*T²<br />
+                ${s} = ${so + s} + ${vo}*T + ${a}*T²/2<br />
+                0 = ${so} - ${s} + ${vo}*T + ${a/2}*T²<br />
+                0 = ${so} + ${vo}*T + ${a/2}*T²<br />
                 Δ = ${vo}² - 4*${a}*${so-s}<br />
                 Δ = ${vo**2} - 4*${a}*${so-s} <br />
-                Δ = ${vo**2} ${Math.sign(-4*a*so-s) ? "+" : ""} ${-4*a*so-s} <br />
+                Δ = ${vo**2} ${Math.sign(-4*a*so) ? "+" : ""} ${-4*a*so} <br />
                 Δ = ${(vo**2) - (4*a*so-s)} <br />
                 Essa equação não tem raízes.
                  <br />
@@ -218,18 +220,20 @@ setInnerText(textT, t);
             console.log(delta);
         }
         var result1 = (-vo + delta) / (2*a);
+        console.log("Result1 " + result1);
         var result2 = (-vo - delta) / (2*a);
         var result = [];
         if (result1 >= 0) {
-            console.log(result1);
+            console.log("entrou");
             result.push(result1);
+            console.log("Result1 " + result1);
         }
         if (result2 >= 0) {
-            console.log(result2);
+            console.log("entrou");
             result.push(result2);
         }
         console.log(result);
-        if (result.length == 0) {
+        if (result.length == 0 || result === undefined) {
         setInnerText(textT, "Não foi possível calcular");
         } else {
             setInnerText(textT, result);
@@ -237,34 +241,36 @@ setInnerText(textT, t);
         if (delta > 0) {
             setInnerHTML(textFormula,
                 `S = So + VoT + AT²/2<br />
-                ${s} = ${so} + ${vo}*T + ${a}*T²/2<br />
-                0 = ${so-s} + ${vo}*T + ${a/2}*T²<br />
-                Δ = ${vo}² - 4*${a}*${so-s}<br />
-                Δ = ${vo**2} - 4*${a}*${so-s} <br />
-                Δ = ${vo**2} ${Math.sign(-4*a*so-s) ? "+" : "-"} ${-4*a*so-s} <br />
-                Δ = ${(vo**2) - (4*a*so-s)} <br />
-                tI = ${-vo} +- √${delta}/2*${a} <br />
-                tI = ${-vo} + √${Math.sqrt(delta)}/${2*a} <br />
-                tI = ${-vo + Math.sqrt(delta)}/${2*a} <br />
-                tI = ${(-vo + Math.sqrt(delta))/2*a} <br />
-                tII = ${-vo} +- √${delta}/2*${a} <br />
-                tII = ${-vo} - √${Math.sqrt(delta)}/${2*a} <br />
-                tII = ${-vo - Math.sqrt(delta)}/${2*a} <br />
-                tII = ${(-vo - Math.sqrt(delta))/2*a}`);
+                ${s} = ${so + s} + ${vo}*T + ${a}*T²/2<br />
+                0 = ${so} - ${s} + ${vo}*T + ${a/2}*T²<br />
+                0 = ${so} + ${vo}*T + ${a/2}*T²<br />
+                Δ = ${vo}² - 4*${a}*${so}<br />
+                Δ = ${vo**2} - 4*${a}*${so} <br />
+                Δ = ${vo**2} ${Math.sign(-4*a*so) ? "+" : "-"} ${-4*a*so} <br />
+                Δ = ${(vo**2) - (4*a*so)} <br />
+                tI = ${-vo} +- √${delta**2}/2*${a} <br />
+                tI = ${-vo} + ${delta}/${2*a} <br />
+                tI = ${-vo + delta}/${2*a} <br />
+                tI = ${result1} <br />
+                tII = ${-vo} +- √${delta**2}/2*${a} <br />
+                tII = ${-vo} - ${delta}/${2*a} <br />
+                tII = ${-vo - delta}/${2*a} <br />
+                tII = ${result2}`);
             }
         if (delta == 0) {
             setInnerHTML(textFormula,
                 `S = So + VoT + AT²/2<br />
-                ${s} = ${so} + ${vo}*T + ${a}*T²/2<br />
-                0 = ${so-s} + ${vo}*T + ${a/2}*T²<br />
-                Δ = ${vo}² - 4*${a}*${so-s}<br />
-                Δ = ${vo**2} - 4*${a}*${so-s} <br />
-                Δ = ${vo**2} ${Math.sign(-4*a*so-s) ? "+" : "-"} ${-4*a*so-s} <br />
+                ${s} = ${so + s} + ${vo}*T + ${a}*T²/2<br />
+                0 = ${so} - ${s} + ${vo}*T + ${a/2}*T²<br />
+                0 = ${so} + ${vo}*T + ${a/2}*T²<br />
+                Δ = ${vo}² - 4*${a}*${so}<br />
+                Δ = ${vo**2} - 4*${a}*${so} <br />
+                Δ = ${vo**2} ${Math.sign(-4*a*so) ? "+" : "-"} ${-4*a*so} <br />
                 Δ = ${(vo**2) - (4*a*so-s)} <br />
-                tI = ${-vo} +- √${delta}/2*${a} <br />
-                tI = ${-vo} + √${Math.sqrt(delta)}/${2*a} <br />
-                tI = ${-vo + Math.sqrt(delta)}/${2*a} <br />
-                tI = ${(-vo + Math.sqrt(delta))/2*a} <br />`);
+                tI = ${-vo} +- √${delta**2}/2*${a} <br />
+                tI = ${-vo} + ${delta}/${2*a} <br />
+                tI = ${-vo + delta}/${2*a} <br />
+                tI = ${result} <br />`);
             }
     }
         //Ver se é F3

@@ -1,0 +1,33 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(17, 17, 17);
+}
+.wrapper {
+    width: 100%;
+}
+.result {
+    border: 0px;
+    border-left: 1px;
+    border-color: gray;
+    border-style: solid;
+    margin-left: 2rem;
+    padding-left: 2rem;
+}
+.flex {
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+
+h4 {
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+}
+
+p {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}

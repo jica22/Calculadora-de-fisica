@@ -33,92 +33,44 @@ drawGrid(800, 400, "canvas");
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
+function canvas_arrow(context, fromx, fromy, tox, toy) {
+    var headlen = 10; // length of head in pixels
+    var dx = tox - fromx;
+    var dy = toy - fromy;
+    var angle = Math.atan2(dy, dx);
+    context.moveTo(fromx, fromy);
+    context.lineTo(tox, toy);
+    context.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
+    context.moveTo(tox, toy);
+    context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
+  }
 
-function drawVector(xs,ys,x,y) {
-    if (xs < x && ys < y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x-10,y);
-        ctx.lineTo(x,y-10);
-        ctx.closePath();
-        ctx.fill();
-    } else if (xs > x && ys > y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x+10,y);
-        ctx.lineTo(x,y+10);
-        ctx.closePath();
-        ctx.fill();
+    elemLeft = canvas.offsetLeft;
+    elemTop = canvas.offsetTop;
+    var x1 = 0;
+    var y1 = 0;
+    var x2 = 0;
+    var y2 = 0;
+    var firstClick = true;
 
-    }  else if (xs < x && ys > y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x-10,y);
-        ctx.lineTo(x,y+10);
-        ctx.closePath();
-        ctx.fill();
-
-    } else if (xs < x && ys < y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x+10,y);
-        ctx.lineTo(x,y+10);
-        ctx.closePath();
-        ctx.fill();
-
-    } else if (xs > x && ys < y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x+10,y);
-        ctx.lineTo(x,y-10);
-        ctx.closePath();
-        ctx.fill();
-
-    } else if (xs > x && ys < y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x+10,y);
-        ctx.lineTo(x,y-10);
-        ctx.closePath();
-        ctx.fill();
-
-    } else if (xs < x && ys == y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x-10,y+10);
-        ctx.lineTo(x-10,y-10);
-        ctx.closePath();
-        ctx.fill();
-
-    } else if (xs > x && ys == y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x+10,y-10);
-        ctx.lineTo(x+10,y+10);
-        ctx.closePath();
-        ctx.fill();
-
-    } else if (xs == x && ys < y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x+10,y-10);
-        ctx.lineTo(x-10,y-10);
-        ctx.closePath();
-        ctx.fill();
-
-    } else if (xs == x && ys > y) {
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x-10,y+10);
-        ctx.lineTo(x+10,y+10);
-        ctx.closePath();
-        ctx.fill();
-
-    }
-    ctx.beginPath();
-    ctx.moveTo(xs,ys);
-    ctx.lineTo(x,y);
-    ctx.stroke();
-}
-
-drawVector(50,5,15,50);
+// Add event listener for `click` events.
+// Add event listener for `click` events.
+canvas.addEventListener('click', function(event) {
+    var x = event.pageX - elemLeft;
+    var y = event.pageY - elemTop;
+        if (firstClick == true) {
+            firstClick = false;
+            x1 = x;
+            y1 = y;
+        }
+        else {
+            console.log(x1);
+            console.log(x2);
+            firstClick = true;
+            x2 = x;
+            y2 = y;
+            ctx.beginPath();
+            canvas_arrow(ctx, x1, y1, x2, y2);
+            ctx.stroke();
+        };
+});

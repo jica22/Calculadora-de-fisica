@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
-            <a href="#" class="navbar-brand">Porcentagem</a>
+            <a href="#" class="navbar-brand">Juros Simples</a>
 
             <button
             class="navbar-toggler" 
@@ -40,21 +40,24 @@
         <div class="col-12 col-md-4">
             <form id = "porcentagemForm" autocomplete="off" class="mx-2 mt-2">
                 <div class="mb-2">
-                    <label for="n" class="form-label">Número</label>
-                    <input type="number" class="form-control" id="n">
+                    <label for="capital" class="form-label">Capital</label>
+                    <input type="number" class="form-control" id="capital">
                 </div>
                 <div class="mb-2">
-                    <label for="p" class="form-label">Porcentagem</label>
-                    <input type="number" class="form-control" id="p">
+                    <label for="taxa" class="form-label">Taxa (Porcentagem)</label>
+                    <input type="number" class="form-control" id="taxa">
+                </div>
+                <div class="mb-2">
+                    <label for="tempo" class="form-label">Tempo (meses)</label>
+                    <input type="number" class="form-control" id="tempo">
                 </div>
         
              <div class="mb-2 d-flex flex-column">
-            <button id="porcentagemButton" class="btn btn-primary mt-3 mb-3 md-3">Calcular porcentagem</button>
-            <button id="descontoButton" class="btn btn-primary mt-1 md-3">Calcular desconto</button>
+            <button id="jurosButton" class="btn btn-primary mt-3 mb-3 md-3">Calcular juros</button>
              </div>
             </form>
             </div>
-        <script src="porcentagem.js"></script>
+        <script src="jurosimples.js"></script>
      <div class="col-12 col-md-4 d-flex">
         <div class="vr me-2 me-lg-5"></div>
             <div>

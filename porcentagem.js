@@ -56,4 +56,4 @@ document.getElementById("descontoButton").addEventListener("click",function() {
         x = ${number - (number/100 * porcentagem)}
         `);
     }
-})
+});

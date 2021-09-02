@@ -21,7 +21,18 @@ function setInnerHTML(element, value) {
         element.innerHTML = value;
     }
 }
-
+const dropdown = document.getElementById("dropdownMenu");
+var meses = false;
+document.getElementById("sim").addEventListener("click",function() {
+    meses = true;
+    console.log(meses);
+    dropdown.innerText = "Sim";
+});
+document.getElementById("nao").addEventListener("click",function() {
+    meses = false;
+    console.log(meses);
+    dropdown.innerText = "Não";
+});
 document.getElementById("jurosButton").addEventListener("click",function() {
     var capital = parseFloat(document.getElementById("capital").value);
     var taxa = parseFloat(document.getElementById("taxa").value);
@@ -30,6 +41,7 @@ document.getElementById("jurosButton").addEventListener("click",function() {
     var textResult = document.getElementById('textResult');
     var textMethod = document.getElementById('textMethod');
 
+if (meses == true) {
     if (capital && taxa && tempo) {
         var porcentagem = capital * (taxa/100);
         var valores = [];
@@ -79,5 +91,24 @@ document.getElementById("jurosButton").addEventListener("click",function() {
         }
         setInnerHTML(textMethod, method);
         setInnerHTML(textResult, result);
+    }
+}; 
+    if (meses == false) {
+        if (capital && taxa && tempo) {
+            var result = capital * (taxa/100) * tempo;
+        setInnerText(textResult, "R$" + (capital + result));
+        setInnerHTML(textMethod, `
+        <strong>Cálculo Juros</strong> <br />
+        J = C*(I/100)*T <br />
+        J = ${capital} * (${taxa}/100)*${tempo} <br />
+        J = ${capital} * ${taxa/100} * ${tempo} <br />
+        J = ${capital * (taxa/100) * tempo}<br />
+        <br />
+        <strong>Preço final</strong> <br />
+        M = C + J <br />
+        M = ${capital} + ${result} <br />
+        M = ${capital + result}
+        `)
+        }
     }
 });

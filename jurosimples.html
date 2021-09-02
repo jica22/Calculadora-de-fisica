@@ -51,6 +51,17 @@
                     <label for="tempo" class="form-label">Tempo (meses)</label>
                     <input type="number" class="form-control" id="tempo">
                 </div>
+                <div class="mb-2">
+                    <div class="dropdown d-flex flex-column">
+                        <button class="btn btn-primary dropdown-toggle mt-3 mb-3 md-3" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mostrar juros de cada mês?
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" id="sim">Sim</a></li>
+                          <li><a class="dropdown-item" id="nao">Não</a></li>
+                        </ul>
+                    </div>
+                </div>
         
              <div class="mb-2 d-flex flex-column">
             <button id="jurosButton" class="btn btn-primary mt-3 mb-3 md-3">Calcular juros</button>
@@ -72,6 +83,5 @@
                 <p class="mt-1" id = "textMethod">Desconhecido</p>
             </div>
         </div>
-    </div>
 </body>
 </html>

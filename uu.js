@@ -67,15 +67,6 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         t = zerao(t);
     }
 
-setInnerText(textV, v);
-setInnerText(textVo, vo);
-setInnerText(textS, s);
-setInnerText(textSo, so);
-setInnerText(textDeltas, deltas);
-setInnerText(textA, a);
-setInnerText(textT, t);
-
-
     //Ver se é F1;
     //Achar velocidade final.
     if (!v && vo && !s && !so && !deltas && a && t) {
@@ -83,7 +74,10 @@ setInnerText(textT, t);
         zerado();
         var result = vo + a*t;
         console.log(result);
-        setInnerText(textV, result);
+        setInnerText(textV, result + "m/s");
+        setInnerText(textVo, vo + "m/s");
+        setInnerText(textA, a + "m/s²");
+        setInnerText(textT, t + "s");
         setInnerHTML(textFormula, "V = Vo + AT <br /> V = " + vo + " + "+ a + "*" + t + "<br /> V = " + result);
     }
     //Achar aceleração.
@@ -91,7 +85,10 @@ setInnerText(textT, t);
         zerado();
         var result = (vo + -v)/-t
         console.log(result);
-        setInnerText(textA, result);
+        setInnerText(textA, result + "m/s²");
+        setInnerText(textV, v + "m/s");
+        setInnerText(textVo, vo + "m/s");
+        setInnerText(textT, t + "s");
         setInnerHTML(textFormula,
             `V = Vo + AT <br />
             ${v} = ${vo} + A${t} <br />
@@ -107,7 +104,10 @@ setInnerText(textT, t);
         result = 0;
         }
         console.log(result);
-        setInnerText(textVo, result);
+        setInnerText(textV, v + "m/s");
+        setInnerText(textA, a + "m/s²");
+        setInnerText(textT, t + "s");
+        setInnerText(textVo, result + "m/s");
         setInnerHTML(textFormula,
             `V = Vo + AT <br />
             ${v} = Vo + ${a}*${t} <br />
@@ -122,7 +122,11 @@ setInnerText(textT, t);
         zerado();
         var result = so + (vo*t) + (a*t**2/2);
         console.log(result);
-        setInnerText(textS, result);
+        setInnerText(textS, result + "m");
+        setInnerText(textV, vo + "m/s");
+        setInnerText(textA, a + "m/s²");
+        setInnerText(textT, t + "s");
+        setInnerText(textSo, so + "m");
         setInnerHTML(textFormula,
             `S = So + VoT + AT²/2 <br />
              S = ${so} + ${vo}*${t} + ${a}*${t}²/2<br />
@@ -136,7 +140,11 @@ setInnerText(textT, t);
         zerado();
         var result = -(-s + vo*t + a*t**2/2)
         console.log(result);
-        setInnerText(textSo, result);
+        setInnerText(textSo, result + "m");
+        setInnerText(textV, vo + "m/s");
+        setInnerText(textA, a + "m/s²");
+        setInnerText(textT, t + "s");
+        setInnerText(textSo, s + "m");
         setInnerHTML(textFormula,
             `S = So + VoT + AT²/2 <br />
              ${s} = So + ${vo}*${t} + ${a}*${t}²/2<br />
@@ -153,7 +161,11 @@ setInnerText(textT, t);
         zerado();
         var result = (-s + so + a*t**2/2)/-t;
         console.log(result);
-        setInnerText(textVo, result);
+        setInnerText(textA, a + "m/s²");
+        setInnerText(textT, t + "s");
+        setInnerText(textSo, s + "m");
+        setInnerText(textSo, so + "m");
+        setInnerText(textVo, result + "m/s");
         setInnerHTML(textFormula,
             `S = So + VoT + AT²/2 <br />
              ${s} = ${so} + Vo*${t} + ${a}*${t}²/2<br />
@@ -170,7 +182,11 @@ setInnerText(textT, t);
         zerado();
         var result = (-s + so + vo*t)/-(t**2/2)
         console.log(result);
-        setInnerText(textA, result);
+        setInnerText(textA, vo + "m/s");
+        setInnerText(textT, t + "s");
+        setInnerText(textSo, s + "m");
+        setInnerText(textSo, so + "m");
+        setInnerText(textA, result + "m/s²");
         setInnerHTML(textFormula,
             `S = So + VoT + AT²/2 <br />
              ${s} = ${so} + ${vo}*${t} + A*${t}²/2<br />
@@ -212,14 +228,18 @@ setInnerText(textT, t);
         var result = [];
         if (result1 >= 0) {
             console.log("entrou");
-            result.push(result1);
+            result.push(result1 + "s");
             console.log("Result1 " + result1);
         }
         if (result2 >= 0) {
             console.log("entrou");
-            result.push(result2);
+            result.push(result2 + "s");
         }
         console.log(result);
+        setInnerText(textA, vo + "m/s");
+        setInnerText(textT, a + "m/s²");
+        setInnerText(textSo, s + "m");
+        setInnerText(textSo, so + "m");
         if (result.length == 0 || result === undefined) {
         setInnerText(textT, "Não existe tempo negativo.");
         } else {
@@ -264,8 +284,11 @@ setInnerText(textT, t);
         //Achar Velocidade final;
     if (!v && vo && !so && deltas && a && !t) {
         zerado();
-        var result = Math.sqrt(vo**2 + 2*a*deltas);    
-        setInnerText(textV, result);
+        var result = Math.sqrt(vo**2 + 2*a*deltas);
+        setInnerText(textVo, vo + "m/s");
+        setInnerText(textDeltas, deltas + "m");
+        setInnerText(textA, a + "m/s²");
+        setInnerText(textV, result + "m/s");
         setInnerHTML(textFormula,
             `V² = Vo² + 2*A*ΔS<br />
             V² = ${vo}² + 2*${a}*${deltas}<br />
@@ -279,7 +302,10 @@ setInnerText(textT, t);
     if (v && !vo && !so && deltas && a && !t) {
         zerado();
         var result = -Math.sqrt((v**2) + 2*a*deltas);
-        setInnerText(textVo, result);
+        setInnerText(textV, v + "m/s");
+        setInnerText(textDeltas, deltas + "m");
+        setInnerText(textA, a + "m/s²");
+        setInnerText(textVo, result + "m/s");
         setInnerHTML(textFormula,
             `V² = Vo² + 2*A*ΔS<br />
             ${v}² = Vo² + 2*${a}*${deltas}<br />
@@ -298,7 +324,10 @@ setInnerText(textT, t);
         if (result == -0) {
             result = 0;
         }
-        setInnerText(textA, result);
+        setInnerText(textV, v + "m/s");
+        setInnerText(textVo, vo + "m/s");
+        setInnerText(textDeltas, deltas + "m");
+        setInnerText(textA, result + "m/s²");
         setInnerHTML(textFormula,
             `V² = Vo² + 2*A*ΔS<br />
             ${v}² = ${vo}² + 2*A*${deltas}<br />
@@ -312,11 +341,15 @@ setInnerText(textT, t);
     //Achar Delta S;
     if (v && vo && !so && !deltas && a && !t) {
         zerado();
+        var tresult = (vo - v) / -a;
         var result = (-(v**2) + vo**2)/-(2*a)
         if (result == -0) {
             result = 0;
         }
-        setInnerText(textDeltas, result);
+        setInnerText(textDeltas, result + "m");
+        setInnerText(textV, v + "m/s");
+        setInnerText(textVo, vo + "m/s");
+        setInnerText(textA, a + "m/s²");
         setInnerHTML(textFormula,
             `Equação de Torricelli: <br />
             V² = Vo² + 2*A*ΔS<br />
@@ -333,7 +366,7 @@ setInnerText(textT, t);
             ${-a}T = ${vo + -v} <br />
             T = ${vo + -v} / ${-a} <br />
             T = ${(vo - v) / -a}`)
-            setInnerText(textT, (vo - v) / -a);
+            setInnerText(textT, tresult + "s");
     }
 });
 

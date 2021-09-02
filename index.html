@@ -7,10 +7,34 @@
     <title>Calculadora de física</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">Calculadora</a>
+
+            <button
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="./porcentagem.html" class="nav-link">Porcentagem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Calculadora M.U.V.</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
     <div class="wrapper row col-12 mt-5">
-        <div class="form col-6 col-md-4">
+        <div class="form col-12 col-md-4">
             <form id="myForm" autocomplete="off" class="mx-auto px-3">
                 <div class="mb-2">
                     <label for="v" class="form-label">Velocidade Final</label>
@@ -44,10 +68,10 @@
             </form>
             <script src="uu.js"></script>
         </div>
-        <div class="col-6 col-md-4 d-flex">
-            <div class="vr me-5"></div>
+        <div class="col-12 col-md-4 d-flex">
+            <div class="vr me-2 me-lg-5"></div>
             <div class="">
-                <h4>Velocidade Final</h4>
+                <h4 id="borda">Velocidade Final</h4>
                 <p id="textV">Desconhecido</p>
                 <h4>Velocidade Inicial</h4>
                 <p id="textVo">Desconhecido</p>
@@ -64,9 +88,9 @@
             </div>
         </div>
         <div class="col-12 col-md-4 d-flex">
-            <div class="vr me-5"></div>
+            <div class="vr me-2 me-lg-5"></div>
             <div>
-                <h4>Fórmulas usadas:</h4>
+                <h4 id="borda">Fórmulas usadas:</h4>
                 <p id="textFormula">Desconhecido</p>
             </div>
         </div>

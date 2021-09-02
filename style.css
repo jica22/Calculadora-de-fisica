@@ -17,3 +17,12 @@ p {
     font-size: 1rem;
     margin-bottom: 0.2rem;
 }
+@media only screen and (max-width: 768px) {
+    #borda {
+        border-top: 1px solid gray;
+        display: block;
+        width:87vw;
+        padding-top: 2rem;
+        margin-top: 2rem;
+    }
+}

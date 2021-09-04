@@ -1,3 +1,71 @@
+body {
+    scroll-behavior: smooth;
+}
+#principal {
+    background-image: url("background4.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+#calculadorah1 {
+    padding-left: 300px;
+}
+#barra a:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+#contato {
+    background-color: rgb(28, 28, 28);
+    background-size:100%;
+    padding-top: 30px;
+    margin-bottom: 0px;
+}
+#contato p {
+    background-color: rgb(28, 28, 28);
+    font-size: x-large;
+    margin-bottom: 0px;
+}
+#final {
+    font-size:x-small;
+    padding-left: 15px;
+    background-color: rgb(28, 28, 28);
+    margin-bottom: 0px;
+}
+#pequenoparagrafo {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#calculadora {
+    height:500px;
+    width:500px;
+    border-image-width: 100%;
+    padding-left: 100px;
+}
+#itens {
+    font-size:x-large;
+}
+h1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#seta1 {
+    padding-top: 110px;
+}
+#header1 {
+    padding-top: 80px;
+}
+#p1 {
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+li {
+    font-size:large;
+}
+#nome {
+    font-size:x-large;
+}
 .result {
     border: 0px;
     border-left: 1px;
@@ -25,4 +93,14 @@ p {
         padding-top: 2rem;
         margin-top: 2rem;
     }
+}
+a {
+    color: #403433;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
 }

@@ -9,10 +9,14 @@ body {
 
 }
 #principal {
+    padding-bottom: 80px;
     background-image: url("background4.png");
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+}
+.lisca-crazy {
+    display: inline-block;
 }
 #calculadorah1 {
     padding-left: 0px;
@@ -40,12 +44,14 @@ body {
     margin-bottom: 0px;
 }
 #pequenoparagrafo {
+    transform: translateY(45%);
     padding-top: 100px;
     padding-bottom: 50px;
     font-size: x-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 #calculadora {
+    transform: translateY(30%);
     height:500px;
     width:500px;
     border-image-width: 100%;
@@ -61,9 +67,10 @@ h1 {
     padding-top: 110px;
 }
 #header1 {
-    padding-top: 80px;
+    transform: translateY(-30%);
 }
 #p1 {
+    transform: translateY(5%);
     font-size: x-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

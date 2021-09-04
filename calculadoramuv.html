@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de física</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DV5R6L1VNW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+         gtag('config', 'G-DV5R6L1VNW');
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">Calculadora M.U.V.</a>
+
+            <button
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="./porcentagem.html" class="nav-link">Porcentagem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Calculadora M.U.V.</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./jurosimples.html" class="nav-link">Juros simples</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper row col-12 mt-5">
+        <div class="form col-12 col-md-4">
+            <form id="myForm" autocomplete="off" class="mx-auto px-3">
+                <div class="mb-2">
+                    <label for="v" class="form-label">Velocidade Final</label>
+                    <input step="0.01" class="form-control" type="number" id="v">
+                </div>
+                <div class="mb-2">
+                    <label for="vo" class="form-label">Velocidade Inicial</label>
+                    <input step="0.01" class="form-control" type="number" id="vo">
+                </div>
+                <div class="mb-2">
+                    <label for="s" class="form-label">Espaço final</label>
+                    <input step="0.01" class="form-control" type="number" id="s">
+                </div>
+                <div class="mb-2">
+                    <label for="so" class="form-label">Espaço inicial</label>
+                    <input step="0.01" class="form-control" type="number" id="so">
+                </div>
+                <div class="mb-2">
+                    <label for="deltas" class="form-label">Variação de espaço</label>
+                    <input step="0.01" class="form-control" type="number" id="deltas">
+                </div>
+                <div class="mb-2">
+                    <label for="a" class="form-label">Aceleração</label>
+                    <input step="0.01" class="form-control" type="number" id="a">
+                </div>
+                <div class="mb-2">
+                    <label for="t" class="form-label">Tempo</label>
+                    <input step="0.01" class="form-control" type="number" id="t">
+                </div>
+                <button id="vaidarcerto" class="mt-2 btn btn-primary w-100">Continuar</button>
+            </form>
+            <script src="uu.js"></script>
+        </div>
+        <div class="col-12 col-md-4 d-flex">
+            <div class="vr me-2 me-lg-5"></div>
+            <div class="">
+                <h4 id="borda">Velocidade Final</h4>
+                <p id="textV">Desconhecido</p>
+                <h4>Velocidade Inicial</h4>
+                <p id="textVo">Desconhecido</p>
+                <h4>Espaço Final</h4>
+                <p id="textS">Desconhecido</p>
+                <h4>Espaço Inicial</h4>
+                <p id="textSo">Desconhecido</p>
+                <h4>Variação de Espaço</h4>
+                <p id="textDeltas">Desconhecido</p>
+                <h4>Aceleração</h4>
+                <p id="textA">Desconhecido</p>
+                <h4>Tempo</h4>
+                <p id="textT">Desconhecido</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 d-flex">
+            <div class="vr me-2 me-lg-5"></div>
+            <div>
+                <h4 id="borda">Fórmulas usadas:</h4>
+                <p id="textFormula">Desconhecido</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

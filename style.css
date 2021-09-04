@@ -2,6 +2,7 @@ body {
     scroll-behavior: smooth;
 }
 #rolypoly {
+    padding-top: 75px;
     padding-left:10px;
     column-count: 2;
     column-span:all;
@@ -9,7 +10,7 @@ body {
 }
 #principal {
     background-image: url("background4.png");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 700px;
 }
@@ -100,7 +101,7 @@ p {
         margin-top: 2rem;
     }
     #principal {
-        background-size: 450%;
+        background-size: cover;
         height:750px;
     }
     #header1 {

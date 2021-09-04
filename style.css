@@ -12,6 +12,7 @@ body {
     padding-bottom: 80px;
     background-image: url("background4.png");
     background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
     width: 100%;
 }

@@ -14,4 +14,5 @@ tl.to("#calculadora", {scrollTrigger: "#calculadora", y:"-3%", duration: 1}, "-=
 if (screen.width >= 768) {
     tl.to("#calculadorah1" , {scrollTrigger: "#calculadorah1", x:"15%", duration: 1}, "-=1");
 }
-tl.to("#pequenoparagrafo", {scrollTrigger: "#pequenoparagrafo", y:"-3%", duration: 1});
+tl.fromTo("#pequenoparagrafo", {opacity: 0}, {scrollTrigger: "#pequenoparagrafo", opacity: 1, duration: 1});
+tl.to("#pequenoparagrafo", {scrollTrigger: "#pequenoparagrafo", y:"-3%", duration: 1}, "-=1.3");

@@ -6,11 +6,12 @@ body {
     padding-left:10px;
     column-count: 2;
     column-span:all;
+    background-color: rgb(235, 235, 235);
 
 }
 #principal {
     padding-bottom: 80px;
-    background-image: url("background4.png");
+    background: linear-gradient(to bottom, rgba(0,0,0,0), 90%, rgb(235, 235, 235)), url("background4.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -50,6 +51,11 @@ body {
     padding-bottom: 50px;
     font-size: x-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom:-1rem;
+}
+#backgroundparagrafo{
+    background-color: rgb(235, 235, 235);
+    margin-bottom:-1rem;
 }
 #calculadora {
     transform: translateY(30%);

@@ -10,9 +10,9 @@ body {
 }
 #principal {
     background-image: url("background4.png");
-    background-size: cover;
     background-repeat: no-repeat;
-    height: 700px;
+    height: 100%;
+    width: 100%;
 }
 #calculadorah1 {
     padding-left: 0px;
@@ -101,8 +101,8 @@ p {
         margin-top: 2rem;
     }
     #principal {
-        background-size: cover;
-        height:750px;
+        object-fit:contain;
+        height:100%;
     }
     #header1 {
     text-align:center;

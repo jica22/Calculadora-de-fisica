@@ -11,6 +11,25 @@ function setInnerText(element, value) {
         element.innerText = value;
     }
 }
+function calculateMS(value) {
+    var number = value.toLowerCase().match(/[0-9]+/g);
+    number = parseFloat(number);
+    if (number == 0) {
+        return value = "0";
+    }
+    if (value.toLowerCase().match(/[a-z]+/g) != null) {
+    var type = value.toLowerCase().match(/[a-z]+/g).join('');
+    }
+    if (type == "kmh" || type == "kmh²" || type == "km") {
+        number = number/3.6;
+        return value = number;
+    } else if (type == "h") {
+        number = number*60
+        return value = number;
+    } else {
+        return value = number;
+    };
+}
 function setInnerHTML(element, value) {
     if(value == 0) {
         element.innerHTML = "0"; 
@@ -28,7 +47,6 @@ function zerinho(valor) {
     }
 }
 function zerao(valor) {
-    console.log(valor);
     if (valor == 0) {
         return valor = 0;
     } else {
@@ -36,13 +54,13 @@ function zerao(valor) {
     }
 }
 document.getElementById("vaidarcerto").addEventListener("click",function() {
-    var v = zerinho(parseFloat(document.getElementById("v").value));
-    var vo = zerinho(parseFloat(document.getElementById("vo").value));
-    var s = zerinho(parseFloat(document.getElementById("s").value));
-    var so = zerinho(parseFloat(document.getElementById("so").value));
-    var deltas = zerinho(parseFloat(document.getElementById("deltas").value));
-    var a = zerinho(parseFloat(document.getElementById("a").value));
-    var t = zerinho(parseFloat(document.getElementById("t").value));
+    var v = zerinho(calculateMS(document.getElementById("v").value));
+    var vo = zerinho(calculateMS(document.getElementById("vo").value));
+    var s = zerinho(calculateMS(document.getElementById("s").value));
+    var so = zerinho(calculateMS(document.getElementById("so").value));
+    var deltas = zerinho(calculateMS(document.getElementById("deltas").value));
+    var a = zerinho(calculateMS(document.getElementById("a").value));
+    var t = zerinho(calculateMS(document.getElementById("t").value));
 
     const valores = [v, vo, s, so, deltas, a, t];
 
@@ -56,7 +74,6 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
     var F1 = false;
     var F2 = false;
     var F3 = false;
-
     function zerado () {
         v = zerao(v);
         vo = zerao(vo);

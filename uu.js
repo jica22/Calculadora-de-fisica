@@ -71,6 +71,10 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
     var textDeltas = document.getElementById('textDeltas');
     var textA = document.getElementById('textA');
     var textT = document.getElementById('textT');
+    const textos = [textV, textVo, textS, textSo, textDeltas, textA, textT];
+    for (texto in textos) {
+        setInnerText(textos[texto],"Desconhecido");
+    }
     var F1 = false;
     var F2 = false;
     var F3 = false;
@@ -136,6 +140,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         //Ver se é F2
         //Achar Espaço Final
     if (!v && vo && !s && so && !deltas && a && t) {
+        console.log("entrou");
         zerado();
         var result = so + (vo*t) + (a*t**2/2);
         console.log(result);
@@ -155,6 +160,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         //Achar Espaço Inicial
     if (!v && vo && s && !so && !deltas && a && t) {
         zerado();
+        console.log("entrou");
         var result = -(-s + vo*t + a*t**2/2)
         console.log(result);
         setInnerText(textSo, result + "m");
@@ -176,6 +182,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         //Achar Velocidade inicial
     if (!v && !vo && s && so && !deltas && a && t) {
         zerado();
+        console.log("entrou");
         var result = (-s + so + a*t**2/2)/-t;
         console.log(result);
         setInnerText(textA, a + "m/s²");
@@ -197,6 +204,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         //Achar Aceleração
     if (!v && vo && s && so && !deltas && !a && t) {
         zerado();
+        console.log("entrou");
         var result = (-s + so + vo*t)/-(t**2/2)
         console.log(result);
         setInnerText(textA, vo + "m/s");
@@ -218,6 +226,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         //Achar Tempo
     if (!v && s && vo && so && !deltas && a && !t) {
         zerado();
+        console.log("entrou");
         so -= s;
         console.log("Você ta sendo chato opera");
         var delta = Math.sqrt((vo**2) - (4*a/2*so));
@@ -301,6 +310,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         //Achar Velocidade final;
     if (!v && vo && !so && deltas && a && !t) {
         zerado();
+        console.log("entrou");
         var result = Math.sqrt(vo**2 + 2*a*deltas);
         setInnerText(textVo, vo + "m/s");
         setInnerText(textDeltas, deltas + "m");
@@ -318,6 +328,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         //Achar Velocidade inicial;
     if (v && !vo && !so && deltas && a && !t) {
         zerado();
+        console.log("entrou");
         var result = -Math.sqrt((v**2) + 2*a*deltas);
         setInnerText(textV, v + "m/s");
         setInnerText(textDeltas, deltas + "m");
@@ -337,6 +348,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         //Achar Aceleração;
     if (v && vo && !so && deltas && !a && !t) {
         zerado();
+        console.log("entrou");
         var result = (-(v**2) + vo**2)/-(2*deltas)
         if (result == -0) {
             result = 0;
@@ -358,6 +370,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
     //Achar Delta S;
     if (v && vo && !so && !deltas && a && !t) {
         zerado();
+        console.log("entrou");
         var tresult = (vo - v) / -a;
         var result = (-(v**2) + vo**2)/-(2*a)
         if (result == -0) {

@@ -4,6 +4,7 @@ body {
 #corpinmaromba {
     width: 100vw;
     height: 100vh;
+    overflow:hidden;
 }
 #rolypoly {
     padding-top: 75px;
@@ -53,10 +54,13 @@ body {
     padding-top:10px;
     padding-left:30px;
     padding-right:30px;
-    height:90vh;
+    height:85vh;
     width:50vh;
     background-color: rgba(22, 49, 103, 0.63);
     border-radius:12px;
+}
+.form-label{
+    margin-bottom:.3rem;
 }
 .res {
     border-radius:5%;
@@ -66,6 +70,7 @@ body {
     border:black;
     border-width:30px;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     margin-left: 100px;
     background-color: rgba(22, 49, 103, 0.63);
@@ -172,9 +177,9 @@ p {
 }
 @media only screen and (max-width: 768px) {
     #borda {
-        border-top: 1px solid gray;
+        border-top: 1px solid rgba(35, 77, 161, 0.842);
         display: block;
-        width:87vw;
+        width:275px;
         padding-top: 2rem;
         margin-top: 2rem;
     }
@@ -204,6 +209,62 @@ p {
     #calculadorah1{
         padding-top:50px;
         text-align:center;
+    }
+    #corpinmaromba {
+        width: 100vw;
+        height: 100vh;
+        overflow-y:scroll;
+        overflow-x:hidden;
+        background-color:rgba(31, 63, 125, 1);
+    }
+    .botao {
+        margin-bottom:90px;
+    }
+    .gride {
+        font-family: "Poppins", sans-serif;
+        color: rgb(235, 235, 235);
+        width: 100vw;
+        height: 100vh;
+        margin-left:9vw;
+        background-color:rgba(31, 63, 125, 1);
+        display:flex;
+        flex-direction:column;
+        padding-top: 10px;
+        padding-left:30px;
+    }
+    .cavalo {
+        padding-top:10px;
+        padding-left:30px;
+        padding-right:30px;
+        height:88vh;
+        width:50vh;
+        background-color: rgba(22, 49, 103, 0.63);
+        border-radius:12px;
+    }
+    .form-label{
+        margin-bottom:.3rem;
+    }
+    .res {
+        display:flex;
+        border-radius:5%;
+        margin-top:30px;
+        padding-left: 0px;
+        padding-right: 30px;
+        border-style: hidden;
+        border-top-style: hidden;
+        border-width:0px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content:flex-end;
+        margin-left:0px;
+        padding-left:10px;
+        background-color: rgba(22, 49, 103, 0.63);
+        background-size: 100%;
+        height: 300vh;
+        width: 300px;
+    }
+    .cavalinho {
+        padding-top:1.5rem;
     }
 }
 a {

@@ -11,6 +11,7 @@ function setInnerText(element, value) {
         element.innerText = value;
     }
 }
+
 function calculateMS(value) {
     var number = value.toLowerCase().match(/[0-9]+/g);
     number = parseFloat(number);
@@ -39,6 +40,7 @@ function setInnerHTML(element, value) {
         element.innerHTML = value;
     }
 }
+
 function zerinho(valor) {
     if (valor == 0) {
         return valor = "0";
@@ -46,6 +48,7 @@ function zerinho(valor) {
         return valor;
     }
 }
+
 function zerao(valor) {
     if (valor == 0) {
         return valor = 0;
@@ -72,9 +75,11 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
     var textA = document.getElementById('textA');
     var textT = document.getElementById('textT');
     const textos = [textV, textVo, textS, textSo, textDeltas, textA, textT];
+
     for (texto in textos) {
         setInnerText(textos[texto],"Desconhecido");
     }
+    
     var F1 = false;
     var F2 = false;
     var F3 = false;

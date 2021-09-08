@@ -2,7 +2,6 @@ var form = document.getElementById("porcentagemForm");
 function handleForm(event) { event.preventDefault(); } 
 form.addEventListener('submit', handleForm);
 
-
 function setInnerText(element, value) {
     if(value == 0) {
         element.innerText = "0"; 

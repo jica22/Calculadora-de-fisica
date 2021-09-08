@@ -16,8 +16,12 @@
 
          gtag('config', 'G-DV5R6L1VNW');
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="corpinmaromba">
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
             <a href="index.html" class="navbar-brand">Calculadora M.U.V.</a>
@@ -44,43 +48,44 @@
             </div>
         </div>
     </nav>
-    <div class="wrapper row col-12 mt-5">
-        <div class="form col-12 col-md-4">
-            <form id="myForm" autocomplete="off" class="mx-auto px-3">
-                <div class="mb-2">
+    <div class="gride">
+        <div class="cavalo">
+            <form id="myForm" autocomplete="off" class="formulario">
+                <div class="">
                     <label for="v" class="form-label">Velocidade Final</label>
                     <input step="0.01" class="form-control" type="text" id="v">
                 </div>
-                <div class="mb-2">
+                <div class="">
                     <label for="vo" class="form-label">Velocidade Inicial</label>
                     <input step="0.01" class="form-control" type="text" id="vo">
                 </div>
-                <div class="mb-2">
+                <div class="">
                     <label for="s" class="form-label">Espaço final</label>
                     <input step="0.01" class="form-control" type="text" id="s">
                 </div>
-                <div class="mb-2">
+                <div class="">
                     <label for="so" class="form-label">Espaço inicial</label>
                     <input step="0.01" class="form-control" type="text" id="so">
                 </div>
-                <div class="mb-2">
+                <div class="">
                     <label for="deltas" class="form-label">Variação de espaço</label>
                     <input step="0.01" class="form-control" type="text" id="deltas">
                 </div>
-                <div class="mb-2">
+                <div class="">
                     <label for="a" class="form-label">Aceleração</label>
                     <input step="0.01" class="form-control" type="text" id="a">
                 </div>
-                <div class="mb-2">
+                <div class="">
                     <label for="t" class="form-label">Tempo</label>
                     <input step="0.01" class="form-control" type="text" id="t">
                 </div>
-                <button id="vaidarcerto" class="mt-2 btn btn-primary w-100">Continuar</button>
+                <button id="vaidarcerto" class="botao"><strong>Continuar</strong></button>
             </form>
             <script src="uu.js"></script>
         </div>
-        <div class="col-12 col-md-4 d-flex">
-            <div class="vr me-2 me-lg-5"></div>
+    <div class="res">
+        <div class="">
+            <div class=""></div>
             <div class="">
                 <h4 id="borda">Velocidade Final</h4>
                 <p id="textV">Desconhecido</p>
@@ -98,13 +103,15 @@
                 <p id="textT">Desconhecido</p>
             </div>
         </div>
-        <div class="col-12 col-md-4 d-flex">
-            <div class="vr me-2 me-lg-5"></div>
+        <div class="">
+            <div class=""></div>
             <div>
                 <h4 id="borda">Fórmulas usadas:</h4>
                 <p id="textFormula">Desconhecido</p>
             </div>
         </div>
     </div>
+</div>
+</div>
 </body>
 </html>

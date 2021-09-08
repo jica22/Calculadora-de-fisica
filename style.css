@@ -54,8 +54,8 @@ body {
     padding-top:10px;
     padding-left:30px;
     padding-right:30px;
-    height:85vh;
-    width:50vh;
+    height:34em;
+    width:20em;
     background-color: rgba(22, 49, 103, 0.63);
     border-radius:12px;
 }
@@ -176,6 +176,16 @@ p {
     margin-bottom: 0.2rem;
 }
 @media only screen and (max-width: 768px) {
+    .botao:hover {
+        width: 58vw;
+        height: 30px;
+        background-color: rgba(155, 255, 237, 0.671);
+        color: rgb(66, 66, 66);
+    }
+    .botao:active {
+        border-style:solid;
+        border-color:rgba(152, 255, 236, 0.671);
+    }
     #borda {
         border-top: 1px solid rgba(35, 77, 161, 0.842);
         display: block;

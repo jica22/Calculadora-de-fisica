@@ -13,7 +13,13 @@ function setInnerText(element, value) {
 }
 
 function calculateMS(value) {
-    var number = value.toLowerCase().match(/[0-9]+/g);
+    var number = value.toLowerCase().match(/[/u0-9]+/g);
+    var signal = value.match("-");
+    if (signal != null) {
+        signal += number;
+        number = signal;
+    }
+    console.log(number);
     number = parseFloat(number);
     if (number == 0) {
         return value = "0";
@@ -269,7 +275,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         console.log(result);
         setInnerText(textA, vo + "m/s");
         setInnerText(textT, a + "m/s²");
-        setInnerText(textSo, s + "m");
+        setInnerText(textS, s + "m");
         setInnerText(textSo, so + "m");
         if (result.length == 0 || result === undefined) {
         setInnerText(textT, "Não existe tempo negativo.");

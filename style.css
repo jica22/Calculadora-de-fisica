@@ -181,7 +181,7 @@ p {
 @media only screen and (max-width: 768px) {
     .botao:hover {
         width: 58vw;
-        height: 30px;
+        height: 50px;
         background-color: rgba(155, 255, 237, 0.671);
         color: rgb(66, 66, 66);
     }
@@ -192,7 +192,7 @@ p {
     #borda {
         border-top: 1px solid rgba(35, 77, 161, 0.842);
         display: block;
-        width:275px;
+        width:200px;
         padding-top: 2rem;
         margin-top: 2rem;
     }
@@ -231,7 +231,8 @@ p {
         background-color:rgba(31, 63, 125, 1);
     }
     .botao {
-        margin-bottom:20vh;
+        height:50px;
+        margin-bottom:1vh;
         width:57vw;
     }
     .gride {

@@ -14,8 +14,12 @@
         gtag('js', new Date());
         gtag('config', 'G-DV5R6L1VNW');
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="corpinmaromba">
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
             <a href="index.html" class="navbar-brand">Juros Simples</a>
@@ -42,51 +46,47 @@
             </div>
         </div>
     </nav>
-    <div class="wrapper row col-12 mt-3">
-        <div class="col-12 col-md-4">
-            <form id = "porcentagemForm" autocomplete="off" class="mx-2 mt-2">
-                <div class="mb-2">
-                    <label for="capital" class="form-label">Capital</label>
+    <div class="gride">
+        <div class="cavalo">
+            <form id = "porcentagemForm" autocomplete="off" class="">
+                <div class="">
+                    <label for="capital" class="form-label mt-2">Capital</label>
                     <input type="number" class="form-control" id="capital">
                 </div>
-                <div class="mb-2">
-                    <label for="taxa" class="form-label">Taxa (Porcentagem)</label>
+                <div class="">
+                    <label for="taxa" class="form-label mt-2">Taxa (Porcentagem)</label>
                     <input type="number" class="form-control" id="taxa">
                 </div>
-                <div class="mb-2">
-                    <label for="tempo" class="form-label">Tempo (meses)</label>
+                <div class="">
+                    <label for="tempo" class="form-label mt-2">Tempo (meses)</label>
                     <input type="number" class="form-control" id="tempo">
                 </div>
-                <div class="mb-2">
-                    <div class="dropdown d-flex flex-column">
-                        <button class="btn btn-primary dropdown-toggle mt-3 md-3" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                          Mostrar juros de cada mês?
+                <div class="">
+                    <div class="dropdown">
+                        <button class="botao" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        <strong>Mostrar juros de cada mês?</strong>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <ul class="dropdown-menu">
                           <li><a class="dropdown-item" id="sim">Sim</a></li>
                           <li><a class="dropdown-item" id="nao">Não</a></li>
                         </ul>
                     </div>
                 </div>
-             <div class="mb-2 d-flex flex-column">
-            <button id="jurosButton" class="btn btn-primary mt-1 md-3">Calcular juros</button>
-             </div>
+            <button id="jurosButton" class="botao mb-3"><strong>Calcular juros</strong></button>
             </form>
             </div>
         <script src="jurosimples.js"></script>
-     <div class="col-12 col-md-4 d-flex">
-        <div class="vr me-2 me-lg-5"></div>
+        <div class="res">
             <div>
                 <h4 id="borda">Resultado</h4>
-                <p class="mt-1" id = "textResult">Desconhecido</p>
+                <p class="" id = "textResult">Desconhecido</p>
             </div>
-    </div>
-    <div class="col-12 col-md-4 d-flex">
-        <div class="vr me-2 me-lg-5"></div>
-            <div>
-                <h4 id="borda">Método</h4>
+            <div class="cavalinho">
+                <h4>Método</h4>
                 <p class="mt-1" id = "textMethod">Desconhecido</p>
             </div>
         </div>
+    </div>
+</div>
 </body>
 </html>

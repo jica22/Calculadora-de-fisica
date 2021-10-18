@@ -53,27 +53,24 @@
         <div class="cavalo">
             <form id = "porcentagemForm" autocomplete="off" class="">
                 <div class="">
+                    <label for="juros" class="form-label mt-2">Juros</label>
+                    <input step="0.01" type="number" class="form-control" id="juros">
+                </div>
+                <div class="">
                     <label for="capital" class="form-label mt-2">Capital</label>
                     <input step="0.01" type="number" class="form-control" id="capital">
                 </div>
                 <div class="">
-                    <label for="taxa" class="form-label mt-2">Taxa (Porcentagem)</label>
+                    <label for="taxa" class="form-label mt-2">Taxa</label>
                     <input step="0.01" type="number" class="form-control" id="taxa">
                 </div>
                 <div class="">
-                    <label for="tempo" class="form-label mt-2">Tempo (meses)</label>
+                    <label for="tempo" class="form-label mt-2">Tempo</label>
                     <input step="0.01" type="number" class="form-control" id="tempo">
                 </div>
                 <div class="">
-                    <div class="dropdown">
-                        <button class="botao" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                        <strong>Mostrar juros de cada mês?</strong>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" id="sim">Sim</a></li>
-                          <li><a class="dropdown-item" id="nao">Não</a></li>
-                        </ul>
-                    </div>
+                    <label for="montante" class="form-label mt-2">Montante</label>
+                    <input step="0.01" type="number" class="form-control" id="montante">
                 </div>
             <button id="jurosButton" class="botao mb-3"><strong>Calcular juros</strong></button>
             </form>

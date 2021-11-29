@@ -160,14 +160,14 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
     if (v && cos && sen && !g) {
         var veloX = velocidadeX(v, cos);
         var veloY = velocidadeY(v, sen);
-        alcance(veloX, veloY, 10);
+        alcance(veloY, veloX, 10);
         altura(veloY, 10);
 
     }
     if (v && cos && sen && g) {
         var veloX = velocidadeX(v, cos);
         var veloY = velocidadeY(v, sen);
-        alcance(veloX, veloY, g);
+        alcance(veloY, veloX, g);
         altura(veloY, g);
 
     }

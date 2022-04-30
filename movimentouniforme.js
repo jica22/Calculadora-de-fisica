@@ -12,31 +12,6 @@ function setInnerText(element, value) {
     }
 }
 
-function calculateMS(value) {
-    var number = value.toLowerCase().match(/[/u0-9]+/g);
-    var signal = value.match("-");
-    if (signal != null) {
-        signal += number;
-        number = signal;
-    }
-    console.log(number);
-    number = parseFloat(number);
-    if (number == 0) {
-        return value = "0";
-    }
-    if (value.toLowerCase().match(/[a-z]+/g) != null) {
-    var type = value.toLowerCase().match(/[a-z]+/g).join('');
-    }
-    if (type == "kmh" || type == "kmh²" || type == "km") {
-        number = number/3.6;
-        return value = number;
-    } else if (type == "h") {
-        number = number*60
-        return value = number;
-    } else {
-        return value = number;
-    };
-}
 function setInnerHTML(element, value) {
     if(value == 0) {
         element.innerHTML = "0"; 
@@ -63,11 +38,11 @@ function zerao(valor) {
     }
 }
 document.getElementById("vaidarcerto").addEventListener("click",function() {
-    var v = zerinho(calculateMS(document.getElementById("v").value));
-    var s = zerinho(calculateMS(document.getElementById("s").value));
-    var so = zerinho(calculateMS(document.getElementById("so").value));
-    var deltas = zerinho(calculateMS(document.getElementById("deltas").value));
-    var t = zerinho(calculateMS(document.getElementById("t").value));
+    var v = zerinho(document.getElementById("v").value);
+    var s = zerinho(document.getElementById("s").value);
+    var so = zerinho(document.getElementById("so").value);
+    var deltas = zerinho(document.getElementById("deltas").value);
+    var t = zerinho(document.getElementById("t").value);
 
     const valores = [v, s, so, deltas, t];
 
@@ -94,6 +69,7 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
     }
 
     if (so && v && t) { //Espaço Final
+        zerado();
         var result = so + v*t;
         setInnerText(textS, result + "m")
         setInnerText(textV, v + "m/s");
@@ -104,8 +80,8 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         S = ${so} + ${v*t} <br />
         S = ${result}m`);
         
-    }
-    if (v && s && t) { // Espaço Inicial
+    } else if (v && s && t) { // Espaço Inicial
+        zerado();
         var result = -1*((v*t)-s);
         setInnerText(textSo, result + "m");
         setInnerText(textS, s + "m");
@@ -118,8 +94,8 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         So = ${(v*t)-s} *-1<br />
         So = ${result}m`);
         
-    }
-    if (so && s && t) { // Velocidade
+    } else if (so && s && t) { // Velocidade
+        zerado();
         var result = (so - s)/-t;
         setInnerText(textV, result + "m/s");
         setInnerText(textS, s + "m");
@@ -132,8 +108,8 @@ document.getElementById("vaidarcerto").addEventListener("click",function() {
         V = ${so - s}/${-t} <br />
         V = ${result}m/s`);
         
-    }
-    if (v && s && so) { // Tempo
+    } else if (v && s && so) { // Tempo
+        zerado();
         var result = (so - s)/-v;
         setInnerText(textT, result + "s");
         setInnerText(textS, s + "m");
